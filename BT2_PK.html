@@ -18,6 +18,8 @@
                     MSSV: 31151021602<br>
                     Họ và tên: Nguyễn Lê Trí Đức<br>
                 </p>
+                <input  id="search" type="text" placeholder="Search"/>
+                <input type="button" value="Tìm" onclick="timkiem()" />
             </td>
         </tr>
         <tr>
@@ -218,5 +220,20 @@
             </td>
         </tr>
     </table>
+   
+    <script>
+        function timkiem() {
+            hienthi = document.getElementsByClassName("sanpham1");
+            danhsachthongtin = document.getElementsByClassName("thongtin");
+            var text = danhsachthongtin.innerHTML;
+            var tim = document.getElementById("search").value;
+            if (text == tim) {
+                hienthi.style.display = none;
+            }
+            
+
+
+        }
+    </script>
 </body>
 </html>
